@@ -20,3 +20,9 @@ new to Maven? - https://maven.apache.org/guides/getting-started/maven-in-five-mi
 `mvn -Dtest=lovey.ScoreCollectionTest test` - to run a single test.
 
 http://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html
+
+### Guard - TDD
+
+`bundle install` - to get the `listen` gem.
+
+`./guard.rb` - to start watching your files. - [save] a test to run it automatically. - [save] a class and the corresponding test will be run.

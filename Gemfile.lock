@@ -1,0 +1,30 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.3)
+    ffi (1.15.4)
+    listen (3.7.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
+    method_source (1.0.0)
+    pry (0.14.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-doc (1.2.0)
+      pry (~> 0.11)
+      yard (~> 0.9.11)
+    rb-fsevent (0.11.0)
+    rb-inotify (0.10.1)
+      ffi (~> 1.0)
+    yard (0.9.26)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  listen
+  pry
+  pry-doc
+
+BUNDLED WITH
+   2.1.4
