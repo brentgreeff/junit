@@ -31,4 +31,8 @@ http://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html
 
 I am using Atom, with the https://github.com/atom/ide-java package. - Based on the [Eclipse JDT Language Server](https://github.com/eclipse/eclipse.jdt.ls)
 
-Seems something similar is available for Sublime: https://github.com/sublimelsp/LSP-jdtls & http://dplatz.de/blog/2019/sublime-lsp.html
+Seems something similar is available for Sublime:
+See:
+- https://github.com/sublimelsp/LSP-jdtls
+- http://dplatz.de/blog/2019/sublime-lsp.html
+
