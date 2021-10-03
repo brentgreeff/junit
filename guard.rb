@@ -38,6 +38,8 @@ listener = Listen.to(*watch) do |modified, _added, _removed|
   command = "mvn -Dtest=#{package}.#{klass} test"
   puts "#{command}\n\n"
   system command
+
+  puts `cat target/surefire-reports/#{package}.#{klass}.txt`
 end
 listener.start
 listener.only /\.java$/
