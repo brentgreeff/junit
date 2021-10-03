@@ -16,4 +16,13 @@ public class ScoreCollectionTest {
 
     assertThat(result, equalTo(6));
   }
+
+  // @Test
+  public void meanOfEmpty() {
+    ScoreCollection c = new ScoreCollection();
+
+    int result = c.arithmeticMean();
+
+    assertThat(result, equalTo(0));
+  }
 }

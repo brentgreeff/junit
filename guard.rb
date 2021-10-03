@@ -25,19 +25,19 @@ end
 watch = %w(./src/main/java ./src/test/java)
 
 listener = Listen.to(*watch) do |modified, _added, _removed|
-  return if modified.none?
+  next if modified.none?
   saved_file = modified.first
 
-  if test_file_exists?(saved_file)
-    package, klass = get_test(saved_file)
-
-    system "clear"
-    command = "mvn -Dtest=#{package}.#{klass} test"
-    puts "#{command}\n\n"
-    system command
-  else
+  system "clear"
+  unless test_file_exists?(saved_file)
     puts "No test found for : #{saved_file}"
+    next
   end
+  package, klass = get_test(saved_file)
+
+  command = "mvn -Dtest=#{package}.#{klass} test"
+  puts "#{command}\n\n"
+  system command
 end
 listener.start
 listener.only /\.java$/
