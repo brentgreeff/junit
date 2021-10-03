@@ -12,6 +12,14 @@ public class Profile {
   }
 
   public String getName() {
-    return this.name;
+    return name;
+  }
+
+  public void add(Answer answer) {
+    answers.put(answer.getQuestionText(), answer);
+  }
+
+  public Answer getLatestAnswer() {
+    return this.answers.get("How large is the universe");
   }
 }
