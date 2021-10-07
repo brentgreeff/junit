@@ -12,6 +12,7 @@ public class CriterionTest {
       new Answer("Q", "A"),
       Weight.Important
     );
+
     assertThat(
       c.getAnswer().getQuestionText(), equalTo("Q")
     );
