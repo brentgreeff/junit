@@ -19,6 +19,16 @@ public class Profile {
     answers.put(answer.getQuestionText(), answer);
   }
 
+  public boolean matches(Criteria criteria) {
+    for (Criterion criterion: criteria) {
+      Answer foundAnswer = answers.get(
+        criterion.getAnswer().getQuestionText()
+      );
+      boolean match = foundAnswer.match()
+    }
+    return true;
+  }
+
   public Answer getLatestAnswer() {
     return this.answers.get("How large is the universe");
   }

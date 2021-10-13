@@ -23,4 +23,20 @@ public class ProfileTest {
       p.getLatestAnswer().getQuestionText(), equalTo(q)
     );
   }
+
+  @Test
+  public void matches() {
+    Profile p = new Profile("M");
+    p.add( new Answer("Q", "Unique") );
+
+    Criteria c = new Criteria();
+    c.add(new Criterion(
+      new Answer("Q", "Diff"),
+      Weight.Important
+    ));
+
+    assertTrue(
+      p.matches(c)
+    );
+  }
 }
